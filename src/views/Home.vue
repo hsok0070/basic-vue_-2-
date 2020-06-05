@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id='app'>
+    <h1>This is Home page</h1>
+    <MinWoo></MinWoo>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import MinWoo from '@/components/MinWoo.vue' /* @는 src위치를 가르킨다. */
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
+    MinWoo
+  },
+  data () {
+    return {
+      name: 'Min Woo'
+    }
   }
 }
+
 </script>
+
+<style scoped>
+  h1 {
+    color : red;
+  }
+</style>
