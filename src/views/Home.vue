@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
     <h1>This is Home page</h1>
-    <MinWoo></MinWoo>
+    <MinWoo title='home title' name="MinWoo"></MinWoo>
   </div>
 </template>
 
@@ -15,6 +15,7 @@ export default {
   data () {
     return {
       name: 'Min Woo'
+
     }
   }
 }
