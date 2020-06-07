@@ -1,7 +1,12 @@
 <template>
     <div>
-        <h1>{{ title }}</h1>
-        <!-- <p> {{ name }}</p> -->
+        <p>header</p>
+        <!-- <h1>{{ title }}</h1> -->
+        <slot name='header' :test='test'></slot>
+        <p>Body</p>
+        <slot></slot>
+        <p>footer</p>
+        <p> {{ name }}</p>
         <button @click="updateName">Change Name</button>
     </div>
 </template>
@@ -12,6 +17,7 @@ export default {
     return {
       /* name: 'MinWoo' */ /* props에서 name을 사용하고 있기때문에 다른곳에서 사용 불가 */
       /* name: '' */
+      test: 'MinWoo'
     }
   },
   methods: {
